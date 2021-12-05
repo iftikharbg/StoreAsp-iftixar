@@ -1,0 +1,41 @@
+﻿@using StoreAsp.ViewModels
+@using StoreAsp.Models
+@model HomeIndexViewModel
+
+<ul>
+    @foreach (var role in Model.roles)
+    {
+        <li>
+            @role.Name
+        </li>
+    }
+</ul>
+<ul>
+    @foreach (var user in Model.users)
+    {
+        <li>
+            @user.Name
+            @user.role.Name
+            @user.Age
+            @user.Surname
+        </li>
+    }
+</ul>
+<ul>
+    @foreach (var category in Model.categories)
+    {
+        <li>
+           @category.Name
+        </li>
+    }
+</ul>
+<ul>
+    @foreach (var product in Model.products)
+    {
+        <li>
+            @product.Name
+            @product.Price
+            @product.categories.Name
+        </li>
+    }
+</ul>
